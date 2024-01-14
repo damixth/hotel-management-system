@@ -19,8 +19,13 @@ namespace HotelManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lblError.Visible = true;
-            txtPassword.Clear();
+            lblError.Visible = false;
+            Dashboard ds = new Dashboard();
+            this.Hide();
+            ds.Show();
+
+            //lblError.Visible = true;
+            //txtPassword.Clear();
         }
 
         private void label2_Click(object sender, EventArgs e)

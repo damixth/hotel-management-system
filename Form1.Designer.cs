@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            btnExit = new Button();
+            lblError = new Label();
+            btnLogin = new Button();
+            txtPassword = new TextBox();
             txtUsername = new TextBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            txtPassword = new TextBox();
-            btnLogin = new Button();
-            lblError = new Label();
-            btnExit = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -53,10 +53,60 @@
             panel1.Controls.Add(txtUsername);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(318, 98);
+            panel1.Location = new Point(359, 132);
             panel1.Name = "panel1";
             panel1.Size = new Size(543, 384);
             panel1.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.Transparent;
+            btnExit.BackgroundImage = (Image)resources.GetObject("btnExit.BackgroundImage");
+            btnExit.BackgroundImageLayout = ImageLayout.Stretch;
+            btnExit.ForeColor = Color.Transparent;
+            btnExit.Location = new Point(0, 0);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(29, 30);
+            btnExit.TabIndex = 6;
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.BackColor = Color.Transparent;
+            lblError.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblError.ForeColor = Color.FromArgb(252, 179, 179);
+            lblError.Location = new Point(185, 344);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(197, 17);
+            lblError.TabIndex = 5;
+            lblError.Text = "*Wrong Username or Password!";
+            lblError.Visible = false;
+            lblError.Click += label2_Click;
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = SystemColors.InactiveCaption;
+            btnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Location = new Point(161, 300);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(240, 29);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += button1_Click;
+            // 
+            // txtPassword
+            // 
+            txtPassword.BackColor = SystemColors.ScrollBar;
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(161, 245);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderText = "Password";
+            txtPassword.Size = new Size(240, 29);
+            txtPassword.TabIndex = 3;
             // 
             // txtUsername
             // 
@@ -92,55 +142,6 @@
             label1.TabIndex = 0;
             label1.Text = "User LogIn";
             label1.Click += label1_Click;
-            // 
-            // txtPassword
-            // 
-            txtPassword.BackColor = SystemColors.ScrollBar;
-            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(161, 245);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderText = "Password";
-            txtPassword.Size = new Size(240, 29);
-            txtPassword.TabIndex = 3;
-            // 
-            // btnLogin
-            // 
-            btnLogin.BackColor = SystemColors.InactiveCaption;
-            btnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(161, 300);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(240, 29);
-            btnLogin.TabIndex = 4;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += button1_Click;
-            // 
-            // lblError
-            // 
-            lblError.AutoSize = true;
-            lblError.BackColor = Color.Transparent;
-            lblError.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblError.ForeColor = Color.FromArgb(252, 179, 179);
-            lblError.Location = new Point(185, 344);
-            lblError.Name = "lblError";
-            lblError.Size = new Size(197, 17);
-            lblError.TabIndex = 5;
-            lblError.Text = "*Wrong Username or Password!";
-            lblError.Visible = false;
-            lblError.Click += label2_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.Transparent;
-            btnExit.BackgroundImage = (Image)resources.GetObject("btnExit.BackgroundImage");
-            btnExit.BackgroundImageLayout = ImageLayout.Stretch;
-            btnExit.ForeColor = Color.Transparent;
-            btnExit.Location = new Point(0, 0);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(29, 30);
-            btnExit.TabIndex = 6;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
             // 
             // Form1
             // 
